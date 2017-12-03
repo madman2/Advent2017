@@ -1,7 +1,7 @@
 """Day 01: Inverse Captcha"""
 
 def main():
-    """Return the pathname of the KOS root directory."""
+    """Prints out the answers for both stars in Day 01 of AoC 2017"""
     with open('day01.txt', 'r') as captcha_file:
         captcha = captcha_file.readline()
         captcha = captcha.strip()
@@ -23,12 +23,12 @@ def compute_captcha(captcha, dist):
 def first_star(captcha):
     """Prints the solution for the first star"""
     captcha_value = compute_captcha(captcha, 1)
-    print("Part #1: {}".format(captcha_value))
+    print("Star #1: {}".format(captcha_value))
 
 def second_star(captcha):
     """Prints the solution for the second star"""
     captcha_value = compute_captcha(captcha, int(len(captcha) / 2))
-    print("Part #2: {}".format(captcha_value))
+    print("Star #2: {}".format(captcha_value))
 
 if __name__ == "__main__":
     main()
